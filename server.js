@@ -4,8 +4,7 @@ var express = require('express')
 , MongoClient = require('mongodb').MongoClient;
 
 app.configure(function(){
-	//app.use("/public", express.static(__dirname + '/public'));
-	app.use(express.static(__dirname + '/public'));
+	app.use("/public", express.static(__dirname + '/public'));
 	app.use(express.bodyParser());
 	app.use(app.router); 
 });
