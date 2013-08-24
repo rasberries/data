@@ -19,12 +19,7 @@ module.exports = function(db,app){
 		//
 	});
 	app.post('/api/update_app', function(req,res){
-		console.log(req.body);
-		var name = req.body.input_name;
-		var desc = req.body.input_desc;
-		delete req.body.input_name;
-		delete req.body.input_desc;
-		console.log(req.body);
+		//
 	});
 	app.get('/api/list_apps',function(req,res){
 		console.log('Get -> list_apps');
@@ -34,12 +29,17 @@ module.exports = function(db,app){
 				if(err) console.log(err);
 				if(docs){
 					console.log('docs found in list_apps!');
+					res.send(docs);
 				}
 				else {
+					res.send(404);
 					console.log('No apps found :(');
 				}
 			});
 		});
+	});
+	app.get('/api/apps',function(req,res){
+		console.log('Get ');
 	});
 	app.post('/api/test', function(req,res){
 		console.log('posted data to test');
