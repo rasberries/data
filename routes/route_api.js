@@ -1,7 +1,25 @@
 var API = require('./../modules/api.js');
 var url = require('url');
+var crypto = require ('crypto');
 
 module.exports = function(db,app){
+	app.post('/api/users/register', function (req,res) {
+		var email = req.body.mail;
+		var password = req.body.password;
+
+		var hash_pass = crypto.createHash('sha256').update(password).digest('hex');
+		db.collection('users').insert({mail:email, password:hash_pass}, {safe:true}, function(err, result) {
+				if(err) throw err;
+				if(result) {
+					console.log('A mers');
+					console.log(result);
+				}
+				else
+					console.log('nu a throw\'uit eroare dar nu are nici result');
+			});
+
+			});
+		
 	app.get('/api/login', function(req,res){
 		var url_parts = url.parse(req.url,true);
 		console.log(url_parts.query);
