@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>RaspStore | Developers </title>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="/public/js/dev_dash_create.js"></script>
+		<link rel="stylesheet" type="text/css" href="/public/css/dev_dash.css">
+		<link rel="stylesheet" type="text/css" href="/public/css/dev_dash_create.css">
+	</head>
+	<body>
+		<div id="menu_wrap">
+			<div id="menu_title"><h1>RaspStore</h1></div>
+			<div id="menu">
+				<div class="menu_item">My apps</div>
+				<div class="menu_item">Create App</div>
+				<div class="menu_item">Update app</div>
+				<div class="menu_item">Delete app</div>
+				<div class="menu_item edge_element">Account</div>
+			</div>
+		</div>
+		<div id="wrap">
+			<div class="in_wrapper">
+				<div id="header_wrap">
+					<div id="header_left">
+						<div id="dash_button" class="menu_button">RaspStore</div> > <div class="menu_button" id="dev_button">Developer</div>
+					</div>
+					<div id="header_right">
+						<div id="logout_btn" class="menu_button">Logout</div>
+					</div>
+				</div>
+				
+				<hr>
+				
+				<div id="main_wrap">
+						<h2> Create app </h2>
+					<hr>
+						<form name = "add_app_form" id="add_app_form">
+							Name:
+							<br>
+							<input name="input_name" type ="text" class="i_styled" placeholder="App name"/><br><br>
+							Description:
+							<br>
+							<textarea name="input_desc" class="ta_styled">Some description here</textarea>
+							<br>Dependencies: <br><br>
+							<input name="d_0_url" type ="text" class="i_styled" placeholder ="URL to dependency"/>
+							<input name="d_0_instr" type ="text" class="i_styled d_instr" placeholder ="dependency instructions"/>
+							<div class="add_dependency d_field_control">+</div>
+							<div class="remove_dependency d_field_control">-</div>
+							<div id="d_fields_wrap"></div>
+							<br><br>
+							<input id="submit_button_add" type ="button" value="Submit"/>
+						</form>
+						<div id="test">
+						</div>
+				</div>
+				<div class="push"></div>
+			</div>
+		<hr>
+		<div class="footer_wrap" id="footer_wrap">
+			Copyright &copy 2013 RaspStore
+		</div>
+	</body>
+</html>

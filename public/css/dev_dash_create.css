@@ -1,0 +1,19 @@
+#submit_button_add{
+	padding:10px;
+	background-color:#7ECC49;
+	color:white;
+	border:none;
+}
+.d_field_control{
+	display:inline-block;
+	padding:5px 10px;
+	border:1px solid;
+	font-size:20px;
+	cursor:pointer;
+	cursor:hand;
+}
+
+.d_instr{
+	width:500px;
+	margin-left:5px;
+}
