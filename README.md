@@ -8,8 +8,6 @@ status
 ===
 This standard is currently under development.
 
-Authentication
-===
 
 
 
